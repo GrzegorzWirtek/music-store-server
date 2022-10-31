@@ -3,7 +3,8 @@ import express from 'express';
 import moongose from 'mongoose';
 import cors from 'cors';
 
-import routes from './routes/products.js';
+import productsRoutes from './routes/products.js';
+import adminRoutes from './routes/admin.js';
 
 dotenv.config();
 const app = express();
@@ -11,7 +12,8 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = process.env.PORT;
-app.use('/products', routes);
+app.use('/products', productsRoutes);
+app.use('/admin', adminRoutes);
 
 app.get('/', (req, res) => {
 	res.send('Welcome, this is from shop backend');

@@ -5,7 +5,7 @@ const productSchema = new Schema({
 	price: Number,
 	productsInTheCart: Number,
 	productsInTheShop: Number,
-	images: [{ type: String }],
+	imageBase64: String,
 });
 
 const ProductModel = mongoose.model('product', productSchema);
