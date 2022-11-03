@@ -1,6 +1,6 @@
 import AdminModel from '../models/adminModel.js';
 
-export const getAdminData = async (req, res) => {
+export const authenticateAdmin = async (req, res) => {
 	try {
 		const { login: clientLogin, password: clientPassword } = req.body;
 
